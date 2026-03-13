@@ -7,7 +7,8 @@ import path from 'node:path'
 import { EventEmitter } from 'node:events'
 
 const app = new Hono()
-const dbPath = path.join(process.cwd(), 'casualties.json')
+const DB_DIR = process.env.DATA_DIR || process.cwd()
+const dbPath = path.join(DB_DIR, 'casualties.json')
 const casualtyEvents = new EventEmitter()
 
 async function initDB() {
