@@ -1,0 +1,26 @@
+---
+import '../styles/global.css'
+import DarkeningCanvas from "../components/DarkeningCanvas"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Cost of War</title>
+	</head>
+	<body class="bg-black text-white m-0 p-0 w-screen h-screen overflow-hidden font-sans">
+		
+		<div class="flex items-center justify-center w-full h-full lg:hidden p-8 text-center bg-black">
+			<p class="text-zinc-400 text-lg font-light tracking-wide leading-relaxed">
+				The Cost of War visualization requires a larger screen and precise cursor interaction. <br/><br/>
+				<span class="text-zinc-500 text-sm">Please visit on a desktop browser.</span>
+			</p>
+		</div>
+
+		<main class="hidden lg:block w-full h-full relative">
+			<DarkeningCanvas client:only="react" />
+		</main>
+		
+	</body>
+</html>
