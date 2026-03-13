@@ -68,7 +68,6 @@ app.post('/api/webhook/update', async (c) => {
   return c.json({ success: true, newTotal: data.totalCasualties })
 })
 
-const port = 3001
-serve({ fetch: app.fetch, port })
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3001
 console.log(`Persistent API running on port ${port}`)
 
