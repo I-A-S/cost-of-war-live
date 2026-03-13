@@ -6,7 +6,7 @@ RUN npm install -g pnpm
 
 COPY . .
 
-RUN pnpm install
+RUN pnpm install --no-frozen-lockfile
 
 WORKDIR /app/apps/api
 RUN pnpm build
